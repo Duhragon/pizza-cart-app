@@ -17,7 +17,6 @@ export default {
         "h-purple": "#4d4bca",
         "input-outline": "#706fd2",
         metal: "#565584",
-        // "highlight-font": "#fafaff",
         "highlight-font": "#F4EEE0",
         "font-link": "#aea9e9",
         "h-font-link": "#c9c5f3",
@@ -29,19 +28,10 @@ export default {
         "secondary-bg": "#313343",
         outline: "#42455a",
         "font-dark": "#b8b7c9",
-        // "highlight-font": "#ecebff",
-        // "font-link": "#d6e5f9",
-        // "font-link": "#c7dfff",
-        // "header-bg": "#474E68",
-        // "primary-bg": "#404258",
-        // "secondary-bg": "#50577A",
       },
       rotate: {
         315: "315deg",
       },
-      // outlineOffset: {
-      //   8: "-8px",
-      // },
     },
   },
   plugins: [

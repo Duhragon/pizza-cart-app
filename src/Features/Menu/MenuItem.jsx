@@ -12,9 +12,6 @@ import {
 function MenuItem({ pizza }) {
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
   const dispatch = useDispatch();
-  // const verify = useSelector((state) =>
-  //   state.cart.cart.map((item) => item.pizzaId).includes(id),
-  // );
 
   const quantity = useSelector(getPizzaQty(id));
 
@@ -76,7 +73,6 @@ function MenuItem({ pizza }) {
                 </span>
               )}
               <button
-                // disabled={verify}
                 onClick={verify ? handleDelete : handleAddToCart}
                 className={`${
                   verify
@@ -95,23 +91,3 @@ function MenuItem({ pizza }) {
 }
 
 export default MenuItem;
-// import { formatCurrency } from "../../Utilites/helpers";
-
-// function MenuItem({ pizza }) {
-//   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
-
-//   return (
-//     <li className="bg-secondary-bg border-outline my-2 flex gap-4  rounded border p-2 ">
-//       <img src={imageUrl} alt={name} className="h-24 rounded" />
-//       <div className="flex flex-col">
-//         <p>{name}</p>
-//         <p>{ingredients.join(", ")}</p>
-//         <div className={`mt-auto ${soldOut ? "relative" : ""} `}>
-//           {!soldOut ? <p>{formatCurrency(unitPrice)}</p> : <p>Sold out</p>}
-//         </div>
-//       </div>
-//     </li>
-//   );
-// }
-
-// export default MenuItem;

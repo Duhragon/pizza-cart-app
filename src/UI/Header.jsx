@@ -17,7 +17,6 @@ function Header() {
       </Link>
       <SearchOrder />
       <UserName />
-      {/* <p className="text-font">Shubham</p> */}
     </header>
   );
 }

@@ -10,7 +10,6 @@ function UserRouteGuard({ children }) {
   const location = useLocation();
 
   useEffect(() => {
-    // Use useEffect to check userName when the component mounts
     if (!userName && location.pathname !== "/") {
       navigate("/");
     }

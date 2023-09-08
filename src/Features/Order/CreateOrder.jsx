@@ -60,7 +60,6 @@ function CreateOrder() {
           />
         </div>
 
-        {/* <div className="mb-4 flex flex-col"> */}
         <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-0 sm:text-lg md:text-xl">
           <label className=" self-start sm:basis-40">Contact No</label>
           <div className="flex grow flex-col">
@@ -76,7 +75,6 @@ function CreateOrder() {
             )}
           </div>
         </div>
-        {/* </div> */}
 
         <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-0 sm:text-lg md:text-xl">
           <label className=" self-start sm:basis-40">Address</label>

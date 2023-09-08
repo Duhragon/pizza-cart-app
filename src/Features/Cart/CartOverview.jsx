@@ -12,13 +12,7 @@ function CartOverview() {
     window.location.pathname === "/cart" ||
     window.location.pathname === "/order/new";
 
-  // const quantity = cart.reduce((accV, prevV) => {
-  //   return (accV += prevV.quantity);
-  // }, 0);
 
-  // const totalPrice = cart.reduce((accP, prevP) => {
-  //   return (accP += prevP.totalPrice);
-  // }, 0);
 
   return (
     <>

@@ -1,6 +1,4 @@
-// Test ID: IIDSAT
 
-// import { useParams } from "react-router-dom";
 import { useLoaderData } from "react-router-dom";
 import { getMenu, getOrder } from "../../Services/apiRestaurant";
 import OrderItem from "./OrderItem";
@@ -11,47 +9,11 @@ import {
 } from "../../Utilites/helpers";
 import { useEffect, useState } from "react";
 import UpdatePriority from "./UpdatePriority";
-// import { useEffect, useState } from "react";
 
-const order = {
-  id: "ABCDEF",
-  customer: "Jonas",
-  phone: "123456789",
-  address: "Arroios, Lisbon , Portugal",
-  priority: true,
-  estimatedDelivery: "2027-04-25T10:00:00",
-  cart: [
-    {
-      pizzaId: 7,
-      name: "Napoli",
-      quantity: 3,
-      unitPrice: 16,
-      totalPrice: 48,
-    },
-    {
-      pizzaId: 5,
-      name: "Diavola",
-      quantity: 2,
-      unitPrice: 16,
-      totalPrice: 32,
-    },
-    {
-      pizzaId: 3,
-      name: "Romana",
-      quantity: 1,
-      unitPrice: 15,
-      totalPrice: 15,
-    },
-  ],
-  position: "-9.000,38.000",
-  orderPrice: 95,
-  priorityPrice: 19,
-};
+
 
 function Order() {
-  // const userName = useSelector
   const order = useLoaderData();
-  // Everyone can search for all orders, so for privacy reasons we're gonna gonna exclude names or address, these are only for the restaurant staff
   const {
     id,
     status,
@@ -99,7 +61,6 @@ function Order() {
   // const deliveryIn = calcMinutesLeft(estimatedDelivery);
 
   return (
-    // <div className="mx-auto w-screen max-w-3xl  space-y-6 py-4 pl-2 pr-4">
     <div className="mx-auto flex w-screen max-w-3xl flex-col gap-6 py-4 pl-2 pr-4">
       <div className="flex flex-wrap items-center justify-between gap-2 px-4">
         <h2 className="text-xl font-semibold ">Order #{id} status</h2>
@@ -140,8 +101,6 @@ function Order() {
         ))}
       </ul>
 
-      {/* <div className="space-y-3 rounded border border-outline bg-secondary-bg px-4 py-6"> */}
-      {/* <div className="mt-auto space-y-3 rounded border-8 border-dotted border-primary-bg bg-input-outline px-4 py-6"> */}
       <div className="mt-auto space-y-3 rounded bg-input-outline px-6 py-6  outline-dotted outline-[10px] outline-offset-[-6px] outline-primary-bg sm:outline-[13px] sm:outline-offset-[-7px]">
         <p className="font-semibold text-font-dark">
           Price pizza: {formatCurrency(orderPrice)}

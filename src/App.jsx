@@ -3,7 +3,6 @@ import Home from "./UI/Home";
 import Menu, { loader as menuLoader } from "./Features/Menu/Menu";
 import Cart from "./Features/Cart/Cart";
 import Order, { loader as orderLoader } from "./Features/Order/Order";
-// import Order from "./Features/Order/Order";
 import CreateOrder, {
   action as createOrderAction,
 } from "./Features/Order/CreateOrder";

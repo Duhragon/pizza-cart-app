@@ -2,22 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: #f7f7f7;
-  color: #444;
-}
-
-.layout {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  gap: 32px;
-  height: 100dvh;
-} */
-
 @layer utilities {
-  /* https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
   .loader {
     width: 45px;
     aspect-ratio: 0.5;
@@ -94,27 +79,10 @@
 
 @layer components {
   .button-style {
-    @apply hover:bg-h-purple bg-purple border-outline focus:ring-font-dark inline-block rounded border p-2 font-semibold transition-colors duration-100 focus:outline-none  focus:ring-1 disabled:cursor-not-allowed;
+    @apply inline-block rounded border border-outline bg-purple p-2 font-semibold transition-colors duration-100 hover:bg-h-purple focus:outline-none focus:ring-1  focus:ring-font-dark disabled:cursor-not-allowed;
   }
 
   .input-ring {
-    /* @apply focus:ring-input-outline focus:ring-offset-primary-bg bg-font rounded px-1 py-0.5 text-sm focus:outline-none focus:ring-1 focus:ring-offset-2 sm:py-1 md:text-base; */
-    @apply focus:ring-input-outline focus:ring-offset-header-bg bg-font text-secondary-bg rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-offset-2 sm:px-3 sm:text-base;
+    @apply rounded bg-font px-2 py-1 text-sm text-secondary-bg focus:outline-none focus:ring-1 focus:ring-input-outline focus:ring-offset-2 focus:ring-offset-header-bg sm:px-3 sm:text-base;
   }
-}
-
-.testing-colors {
-  color: #4d4bca;
-  color: #3f3cbb;
-  color: #706fd2;
-  color: #565584;
-  color: #fafaff; /* highlight-font-ori : #ecebff; */
-  color: #aea9e9; /* highlight-font-ori : #ecebff; */
-  color: #c9c5f3; /* highlight-font-ori : #ecebff; */
-  color: #3a3f53; /* header-bg-ori: #474e68; */
-  color: #2d2f3e; /* primary-bg-ori: #404258; */
-  color: #f4eee0;
-  color: #313343; /* secondary-bg-ori: #50577a; */
-  color: #42455a; /* outline */
-  color: #6b728e;
 }

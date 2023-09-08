@@ -14,12 +14,9 @@ function AppLayout() {
       {isLoading && <Loader />}
 
       <Header />
-      {/* <div className=""> */}
-      {/* <main className=" flex max-w-3xl overflow-auto"> */}
       <main className=" max-w-screen mx-2 flex overflow-auto">
         <Outlet />
       </main>
-      {/* </div> */}
 
       <CartOverview />
     </div>
