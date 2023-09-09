@@ -11,6 +11,12 @@ import Error from "../src/UI/Error";
 import UserRouteGuard from "./UI/UserRouteGuard";
 import { action as updateOrderPriority } from "../src/Features/Order/UpdatePriority";
 
+const ProtectRoute = ({ component: Component, ...rest }) => (
+  <UserRouteGuard>
+    <Component {...rest} />
+  </UserRouteGuard>
+);
+
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
@@ -25,41 +31,25 @@ const router = createBrowserRouter([
       {
         path: "/menu",
 
-        element: (
-          <UserRouteGuard>
-            <Menu />
-          </UserRouteGuard>
-        ),
+        element: <ProtectRoute component={Menu} />,
 
         loader: menuLoader,
         errorElement: <Error />,
       },
       {
         path: "/cart",
-        element: (
-          <UserRouteGuard>
-            <Cart />
-          </UserRouteGuard>
-        ),
+        element: <ProtectRoute component={Cart} />,
       },
       {
         path: "/order/:orderId",
         action: updateOrderPriority,
-        element: (
-          <UserRouteGuard>
-            <Order />
-          </UserRouteGuard>
-        ),
+        element: <ProtectRoute component={Order} />,
         loader: orderLoader,
         errorElement: <Error />,
       },
       {
         path: "/order/new",
-        element: (
-          <UserRouteGuard>
-            <CreateOrder />
-          </UserRouteGuard>
-        ),
+        element: <ProtectRoute component={CreateOrder} />,
         action: createOrderAction,
       },
     ],
