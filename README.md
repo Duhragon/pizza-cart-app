@@ -29,9 +29,11 @@ Before running the application, ensure you have the following software installed
    ```
 
 2. Navigate to the project directory:
+```
    cd pizza-cart-app
+```
 
-3. Install project dependencies:
+4. Install project dependencies:
    npm install
 
 #### Usage :
